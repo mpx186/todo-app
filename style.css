@@ -1,0 +1,166 @@
+/*
+=========================================================================
+Background pattern is downloaded from www.toptal.com/designers/subtlepatterns/ 
+If you need more, that's where to get'em.
+========================================================================
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin-ext');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Ubuntu', Arial, sans-serif;
+  font-size: 10px;
+}
+
+body {
+  background-image: url('img/leaves-pattern.png');
+  background-attachment: fixed;
+  min-height: 150vh;
+  margin-top: 80px;
+  padding: 15px;
+}
+
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 80px;
+  padding: 15px;
+  background-color: #3b5998;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 3px 5px rgba(44, 88, 67, 0.25);
+  z-index: 5;
+}
+
+header input {
+  width: 100%;
+  height: 50px;
+  padding: 0 60px 0 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 10px;
+  text-indent: 15px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-size: 1.5rem;
+  font-family: 'Ubuntu',
+    Arial,
+    Helvetica,
+    sans-serif;
+  color: #fff;
+  outline: none;
+}
+
+header input::placeholder {
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+header button {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  display: block;
+  top: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  font-family: 'Arial';
+  font-size: 3.5rem;
+  color: #3b5998;
+  outline: none;
+  transition: 0.2s;
+  line-height: 25px;
+
+}
+
+header button:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+ul.todolist {
+  list-style-type: none;
+}
+
+ul.todolist li {
+  position: relative;
+  min-height: 50px;
+  padding: 11px 100px 10px 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.4rem;
+  line-height: 25px;
+  margin: 5px auto;
+  box-shadow: 0 3px 5px rgba(44, 88, 67, 0.25);
+}
+
+ul.todolist li div.icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 50px;
+}
+
+ul.todolist li div.icon {
+  width: 44.5px;
+  height: 50px;
+  float: left;
+  text-align: center;
+}
+
+i.far.fa-trash-alt {
+  color: rgb(250, 68, 68);
+}
+
+i.far.fa-trash-alt:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+ul.todolist li div.icon::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: 45px;
+  width: 1px;
+  height: 30px;
+  float: left;
+  background-color: rgba(0, 0, 0, 0.219);
+}
+
+i.far {
+  font-size: 1.7rem;
+  text-align: center;
+  line-height: 50px;
+  z-index: 3;
+}
+
+i.far.fa-check-square {
+  color: rgb(27, 175, 52);
+}
+
+i.far.fa-check-square:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+ul.todolist li.done {
+  background-color: rgba(0, 255, 0, 0.3);
+  border-bottom: 2px solid green;
+  text-decoration: line-through;
+}
